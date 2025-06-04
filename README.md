@@ -56,14 +56,41 @@ Create a `.env` file in the root directory and add:
 REACT_APP_GITHUB_BASE_URL=https://api.github.com
 REACT_APP_GITHUB_TOKEN=your_personal_github_token_here
 ```
+### 4. How to Create a GitHub Personal Access Token
+Go to https://github.com/settings/tokens
 
-### 4. Start the development server
+Click "Generate new token (classic)"
+
+Fill in the Token name and expiration (e.g. 30 days)
+
+Under Scopes, check:
+
+    read:user
+
+    user:email
+
+    public_repo
+
+Click "Generate token"
+
+Copy the token and paste it into your .env as REACT_APP_GITHUB_TOKEN
+
+Note: You won’t be able to see the token again once you leave the page, so copy it safely.
+
+| Capture |
+|--------|
+| ![Mobile](./screenshots/Screenshot_115.png) |
+| ![Mobile](./screenshots/Screenshot_116.png) |
+| ![Mobile](./screenshots/Screenshot_117.png) |
+| ![Mobile](./screenshots/Screenshot_118.png) |
+
+### 5. Start the development server
 
 ```bash
 npm start
 ```
 
-### 5. Run tests
+### 6. Run tests
 
 ```bash
 npm test
@@ -71,7 +98,7 @@ npm test
 
 ---
 
-## Project Structure
+## 7. Project Structure
 
 ```
 src/
@@ -88,7 +115,7 @@ src/
 
 ---
 
-## UI Previews
+## 8. UI Previews
 
 | Desktop | Mobile |
 |--------|--------|
@@ -96,7 +123,7 @@ src/
 
 ---
 
-## Example Use Cases
+## 9. Example Use Cases
 
 - Search for user `reactjs`
 - Expand a result to view repositories
@@ -105,7 +132,7 @@ src/
 
 ---
 
-## Notes
+## 10. Notes
 
 - Uses **GitHub's REST API v3**
 - Token is required to avoid rate limiting from unauthenticated users
@@ -113,7 +140,7 @@ src/
 
 ---
 
-## Testing Setup
+## 11. Testing Setup
 
 - `jest.config.ts` defines a jsdom-based environment
 - `src/setupTests.ts` includes MSW setup and polyfills for `TextEncoder`
@@ -121,6 +148,6 @@ src/
 
 ---
 
-## License
+## 12. License
 
 This project is licensed under the MIT License.
