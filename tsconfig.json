@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",                             // Compile the code to ECMAScript 6 (adds support for let, const, arrow functions, etc.)
+    "lib": [
+      "dom",                                     // Adds DOM types like `window`, `document`, `HTMLElement`, etc.
+      "dom.iterable",                            // Enables iteration over DOM collections (e.g., NodeList, HTMLCollection with for...of)
+      "esnext"                                   // Enables the latest ECMAScript features (e.g., Promise.allSettled, WeakRef)
+    ],
+    "module": "esnext",                          // Uses the latest module system (ES modules) for import/export
+    "moduleResolution": "node",                  // Resolves modules using Node.js module resolution algorithm
+    "resolveJsonModule": true,                   // Allows importing `.json` files as modules
+    "esModuleInterop": true,                     // Enables interoperability between ES modules and CommonJS
+    "allowSyntheticDefaultImports": true,        // Allows default imports even if module doesn’t have default export
+    "isolatedModules": true,                     // Ensures each file can be transpiled without relying on others (important for Babel or SWC)
+    "noEmit": true,                              // Do not emit compiled files (useful when using a separate bundler like Webpack or Vite)
+    "jsx": "react-jsx",                          // Enables the new JSX transform (React 17+) without needing `import React` in scope
+    "allowJs": true,                             // Allows JavaScript files to be included in the project
+    "skipLibCheck": true,                        // Skips type checking of declaration files (improves build speed)
+    "strict": true,                              // Enables all strict type-checking options (helps catch bugs early)
+    "forceConsistentCasingInFileNames": true,    // Disallows inconsistent casing in import paths (avoids cross-platform issues)
+    "noFallthroughCasesInSwitch": true,          // Prevents unintended fall-through in switch-case blocks
+    "types": ["jest", "node"]                    // Includes type definitions for Jest (testing) and Node.js
+  },
+  "include": [
+    "src"                                        // Specifies the root directory of the source code
+  ]
+}
